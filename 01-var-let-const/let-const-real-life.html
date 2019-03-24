@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Let and Const Real Life</title>
+  </head>
+  <script>
+    //iife (Immediately-invoked function expression)
+    // (function() {
+    //   var name = 'Andrea';
+    // })();
+
+    // replacing the iife! scoped to the block
+    {
+      const name = 'Andrea';
+      console.log(name);
+    }
+
+    // cant use const though
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+      setTimeout(function() {
+        console.log(`The number is ${i}`);
+      }, 1000);
+    }
+  </script>
+  <body></body>
+</html>

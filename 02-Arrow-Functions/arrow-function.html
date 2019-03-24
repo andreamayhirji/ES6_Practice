@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>arrow functions</title>
+  </head>
+  <body>
+    <script>
+      const names = ['andrea', 'wynston', 'matt'];
+      const fullNames = names.map(function(name) {
+        return `${name} hirji`;
+      });
+
+      // annonymous functions (unnamed)
+      const fullNames2 = names.map(name => {
+        return `${name} hirji`;
+      });
+      const fullNames3 = names.map(name => `${name} hirji`);
+      const fullNames4 = names.map(() => `${name} hirji`);
+
+      // named functions
+      const sayMyName = name => {
+        alert(`Hello, ${name}`);
+      };
+      sayMyName('Andrea');
+    </script>
+  </body>
+</html>

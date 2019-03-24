@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Default Agrguments</title>
+  </head>
+  <script>
+    // order dependant
+    function calculateBill(total, tax = 0.13, tip = 0.15) {
+      // tax = tax || 0.13;
+      // tip = tip || 0.15;
+      // if (tax === undefined) {
+      //   tax = 0.13;
+      // }
+      // if (tip === undefined) {
+      //   tip = 0.15;
+      // }
+      return total + total * tax + total * tip;
+    }
+
+    const totalBill = calculateBill(100, undefined, 0.2);
+    console.log(totalBill);
+  </script>
+  <body></body>
+</html>
